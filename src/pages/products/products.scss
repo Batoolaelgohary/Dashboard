@@ -1,0 +1,19 @@
+.products{
+        .info {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
+
+                h1 {
+                        text-transform: capitalize;
+                        font-size: 24px;
+                }
+
+                button {
+                        text-transform: capitalize;
+                        padding: 5px;
+        }
+        }
+}

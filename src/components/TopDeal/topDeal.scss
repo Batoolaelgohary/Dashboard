@@ -1,0 +1,69 @@
+@import "../../styles/responsive.scss";
+.top-deal {
+  h1 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 20px;
+    @include md {
+      font-size: 16px;
+    }
+  }
+  .list {
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      .user-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        .user-img {
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            @include xl {
+              display: none;
+            }
+            @include lg {
+              display: block;
+            }
+            @include lg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        .user-info {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          span {
+            &:first-child {
+              font-size: 14px;
+              font-weight: 500;
+            }
+            &:last-child {
+              font-size: 12px;
+              @include xxl {
+                display: none;
+              }
+
+              @include lg {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .amount {
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

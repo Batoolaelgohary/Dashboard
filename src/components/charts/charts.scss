@@ -1,0 +1,59 @@
+@import '../../styles/responsive.scss';
+.chart{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+   
+    @include sm{
+        flex-direction: column;
+    }
+    .box-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 3;
+        @include md{
+            gap: 10px;
+        }
+        .title{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: capitalize;
+            @include xl{
+                font-size: 14px;
+            }
+        }
+        h1{
+            font-size: 28px;
+            @include xl{
+                font-size: 20px;
+            }
+        }
+    }
+    .chart-info{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        flex: 2;
+        .chart-img{
+            width: 100%;
+            height: 100%;
+        }
+        .percentage{
+            font-weight: bold;
+            font-size: 20px;
+            color: green;
+            @include xl{
+                font-size: 16px;
+            }
+        }
+        .duration{
+            font-size: 14px;
+            color: rgb(176, 173, 173);
+            @include xl{
+                font-size: 10px;
+            }
+        }
+    }
+}

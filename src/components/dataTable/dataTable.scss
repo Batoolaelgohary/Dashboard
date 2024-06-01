@@ -1,0 +1,33 @@
+.data-table{
+    width: 99%;
+    .data-grid{
+        padding: 5px;
+        background-color: #fff;
+        font-size: 10px;
+        .MuiDataGrid-toolbarContainer{
+            flex-direction: row-reverse;
+            align-items: center;
+            padding: 10px;
+        }
+        img{
+                border-radius: 50%;
+                width:32px;
+                height:32px;
+                object-fit:cover;
+                vertical-align: middle;
+            }
+            .action{
+                display: flex;
+                gap: 10px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+            .delete{
+                border: none;
+                background-color: transparent;
+            }
+            }
+    }
+}

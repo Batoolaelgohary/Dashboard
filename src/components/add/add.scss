@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+.add{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(000, 000, 000, 0.724);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal{
+        padding: 50px;
+        border-radius:10px;
+        background-color:$main-bg ;
+        .close{
+            cursor: pointer;
+            display: flex;
+            justify-content: end;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h1{
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(3,1Fr);
+            gap: 10px;
+            margin-bottom: 20px;
+            .input {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    input {
+                        margin-block: 10px;
+                        padding: 10px;
+                        background-color: transparent;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid $soft-color;
+                        &::placeholder{
+                            font-weight: 700;
+                        }
+                    }
+                    
+                }
+        button{
+            grid-column: span 3;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            padding: 10px;
+            color:$dark-color ;
+            font-weight: 700;
+            margin-top: 10px;
+            &:hover{
+                background-color: transparent;
+                border:1px solid $soft-color ;
+                color: $soft-color;
+            }
+        }
+        }
+    }
+}
