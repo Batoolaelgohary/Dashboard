@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="logo">
         <img src="logo.svg" alt="lamadmin" />
-        <span>Lamadmin</span>
+        <span>Dashboard</span>
       </div>
       <div className="icons">
         <img src="search.svg" alt="" className="icon" />
@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
         <div className="user">
           <img src="noavatar.png" alt="" />
-          <span>Jane</span>
+          <span>Batool</span>
         </div>
         <img src="settings.svg" alt="" className="icon" />
         <span

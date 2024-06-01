@@ -1,4 +1,10 @@
-import { Dispatch, ReactNode, createContext, useReducer } from "react";
+import {
+  Dispatch,
+  ReactNode,
+  createContext,
+  useEffect,
+  useReducer,
+} from "react";
 import { AuthReducer } from "./AuthReducer";
 import User from "../pages/user/User";
 
@@ -24,9 +30,12 @@ export const AuthContext = createContext<{
   state: INITIAL_STATE,
   dispatch: () => undefined,
 });
+
 export const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
-
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(state.currentUser));
+  }, [state.currentUser]);
   return (
     <AuthContext.Provider value={{ state, dispatch }}>
       {children}
